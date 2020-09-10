@@ -1,0 +1,250 @@
+.checkout {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "A C D ." 
+    "B E E E" 
+    "B . . ."
+}
+
+.checkout .personal_details {
+    grid-area: A;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.checkout .delivery_details {
+    grid-area: B;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.checkout .payment_method {
+    grid-area: C;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.checkout .credit_card_details {
+    grid-area: D;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.checkout .order_summary {
+    grid-area: E;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "F F F F" "G G . ." "H H H H" ". . . I";
+    background-color: white;
+}
+
+.checkout .order_summary  .order {
+    grid-area: F;
+}
+
+.checkout .order_summary  .discount_code {
+    grid-area: G;
+}
+
+.checkout .order_summary  .add_comments {
+    grid-area: H;
+}
+
+.checkout  .purchase_button {
+    grid-area: I;
+}
+
+/* wraps each section in a box with a background color and shadow*/
+
+.checkout .personal_details #wrapper, 
+.checkout .delivery_details #wrapper, 
+.checkout .credit_card_details #wrapper, 
+.checkout .payment_method #wrapper {
+    font-family: 'Open Sans Condensed', arial, sans;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.checkout .order_summary .order  {
+    font-family: 'Open Sans Condensed', arial, sans;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+
+.order_summary h2, 
+.personal_details h2, 
+.delivery_details h2, 
+.payment_method h2, 
+.credit_card_details h2 {
+    background: #bbb;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px;
+}
+
+.personal_details label, .delivery_details label, .credit_card_details label {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    color: #2CBBBB;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+
+.payment_method ul {
+    margin: 0;
+    padding: 0;
+}
+
+.payment_method ul li {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    color: grey;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+.checkout input[type="email"], 
+.checkout input[type="number"], 
+.checkout input[type="text"]:not(#comments):not(#cupon_button):not(#cupon_form), 
+.checkout input[type="password"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    color: darkslategray;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+
+.credit_card_details input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    color: darkslategray;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+
+.checkout input:disabled {
+    color: grey;
+}
+
+.checkout input:valid {
+    background-color: green;
+}
+
+.checkout input:empty {
+    background-color: transparent;
+}
+
+.checkout input:invalid {
+    background-color: pink;
+}
+
+.checkout input[type="button"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.credit_card_details #wrapper #date_card, .credit_card_details #wrapper #cvc_card {
+    width: 20%;
+    float:left;
+}
+
+.checkout input[type="button"]:hover {
+    background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color: #34CACA;
+}
+
+.checkout .order_summary  .order {
+    font-family: 'Open Sans Condensed', arial, sans;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.order_summary .discount_code #cupon_button {
+    width: 20%;
+    float: left;
+}
+
+.order_summary .discount_code #cupon_form {
+    width: 50%;
+    float: left;
+    color: darkslategray;
+    font: 16px Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin-right:10px;
+    border: 1px solid #27A0A0;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+}
+
+.order_summary .purchase_button #purchase_btn {
+    width: 100%;
+    float: right;
+}
+
+.order_summary #comments {
+    height: auto !important;
+    min-height: auto;
+    display: block;
+    width: 99%;
+    height: 34px;
+    border: 1px solid #27A0A0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    resize: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    color: darkslategray;
+    margin-top:10px;
+    
+
+}

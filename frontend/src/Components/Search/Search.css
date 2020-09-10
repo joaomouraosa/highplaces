@@ -1,0 +1,93 @@
+/*
+ * Criar o elemento Item, com a imagem do item, nome e preço (F).
+ * Criar uma barra de pesquisa, com o memso sistema que ja estaa.
+ * Criar uma lista de categorias (B). Carrega-se na categoria e aparecem todos os items dessa categoria.
+ * Criar uma caixa para escolher o criterio de ordenacao (por preço, para ja).
+ * Colocar o  nome da categoria (D).
+*/
+
+.products_list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+        "A A A A"
+        "B D D D"
+        "C E E E"
+}
+
+.products_list .search_item {
+    grid-area: A;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+        ". S ."
+}
+
+.products_list .search_item #search_item_input {
+    display: flex;
+    grid-area: S;
+    width: 100%;
+}
+
+.products_list .categories_list {
+    grid-area: B;
+    background-color: pink;
+
+}
+
+.products_list .search_options {
+    grid-area: C;
+    background-color: blue;
+
+}
+
+.products_list .list_items {
+    grid-area: D;
+    background-color: white;
+}
+
+.products_list .page_selection {
+    grid-area: E;
+    background-color: orange;
+
+}
+
+.products_list .list_items .items div {
+    background-color: white;
+    width: 30%;
+    float: left;
+    margin: 1%;
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    font-size: .875rem;
+    line-height: 1.42857;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: .3125rem;
+}
+
+.products_list .list_items .items div img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.products_list .page_selection button {
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%
+}

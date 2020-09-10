@@ -1,0 +1,15 @@
+body:not(.header){
+	margin-left: 20%;
+	margin-right: 20%;
+	background-color: rgb(238, 238, 238);
+}
+
+#root {
+	background-color: rgb(228, 228, 228) !important;
+	height: 100vh;
+}
+
+.products {
+  background-color: lightcyan;
+  float: left;
+}
